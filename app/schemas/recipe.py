@@ -1,7 +1,7 @@
 import uuid
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class RecipeBase(BaseModel):  # type: ignore[misc]
@@ -22,6 +22,4 @@ class RecipeUpdate(RecipeBase):
 class RecipeRead(RecipeBase):
     id: uuid.UUID
     owner_id: uuid.UUID
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
