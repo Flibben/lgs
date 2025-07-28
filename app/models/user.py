@@ -7,7 +7,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from app.db.base import Base
 
 
-class User(SQLAlchemyBaseUserTableUUID, Base):  # type: ignore[misc]
+class User(SQLAlchemyBaseUserTableUUID, Base):
     __tablename__ = "user"
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     email: Mapped[str] = mapped_column(String, unique=True, index=True, nullable=False)

@@ -2,7 +2,7 @@ import pytest
 from httpx import AsyncClient
 
 
-@pytest.mark.asyncio  # type: ignore[misc]
+@pytest.mark.asyncio
 async def test_register_user(async_client: AsyncClient) -> None:
     response = await async_client.post(
         "/api/v1/auth/register",
@@ -11,7 +11,7 @@ async def test_register_user(async_client: AsyncClient) -> None:
     assert response.status_code in (200, 201, 400)  # 400 if already exists
 
 
-@pytest.mark.asyncio  # type: ignore[misc]
+@pytest.mark.asyncio
 async def test_login_user(async_client: AsyncClient) -> None:
     # Register user first (idempotent)
     await async_client.post(

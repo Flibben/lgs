@@ -1,19 +1,14 @@
-from functools import lru_cache
+import os
 
 from pydantic_settings import BaseSettings
 
 
-class Settings(BaseSettings):  # type: ignore[misc]
-    app_env: str = "development"
-    database_url: str
-    secret_key: str
-    jwt_secret: str
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
+class Settings(BaseSettings):
+    app_env: str = os.getenv("APP_ENV", "development")
+    database_url: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./app.db")
+    secret_key: str = os.getenv("SECRET_KEY", "test-secret")
+    jwt_secret: str = os.getenv("JWT_SECRET", "test-jwt-secret")
 
 
-@lru_cache
 def get_settings() -> Settings:
     return Settings()

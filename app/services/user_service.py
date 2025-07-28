@@ -11,7 +11,7 @@ from app.models.user import User
 settings = get_settings()
 
 
-class UserManager(BaseUserManager[User, uuid.UUID]):  # type: ignore[misc]
+class UserManager(BaseUserManager[User, uuid.UUID]):  # type: ignore[type-var]
     reset_password_token_secret = settings.secret_key
     verification_token_secret = settings.secret_key
 
@@ -26,4 +26,6 @@ class UserManager(BaseUserManager[User, uuid.UUID]):  # type: ignore[misc]
 
 async def get_user_manager() -> AsyncGenerator[UserManager, None]:
     async with AsyncSessionLocal() as session:
-        yield UserManager(SQLAlchemyUserDatabase(session, User))
+        db = SQLAlchemyUserDatabase[User, uuid.UUID](session, User)
+        # type: ignore[type-var]
+        yield UserManager(db)  # type: ignore[type-var]

@@ -9,13 +9,13 @@ RECIPE_DATA = {
 }
 
 
-@pytest.mark.asyncio  # type: ignore[misc]
+@pytest.mark.asyncio
 async def test_list_recipes(async_client: AsyncClient) -> None:
     response = await async_client.get("/api/v1/recipes")
     assert response.status_code in (200, 401)  # 401 if not authenticated
 
 
-@pytest.mark.asyncio  # type: ignore[misc]
+@pytest.mark.asyncio
 async def test_recipe_crud_flow(async_client: AsyncClient) -> None:
     # Register and login user
     email = "recipeuser@example.com"
@@ -64,7 +64,7 @@ async def test_recipe_crud_flow(async_client: AsyncClient) -> None:
     assert get_resp.status_code == 404
 
 
-@pytest.mark.asyncio  # type: ignore[misc]
+@pytest.mark.asyncio
 async def test_recipe_unauthorized_access(async_client: AsyncClient) -> None:
     # Try to create recipe without auth
     resp = await async_client.post("/api/v1/recipes", json=RECIPE_DATA)

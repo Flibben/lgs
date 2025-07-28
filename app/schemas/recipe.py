@@ -4,7 +4,7 @@ from typing import Optional
 from pydantic import BaseModel, ConfigDict
 
 
-class RecipeBase(BaseModel):  # type: ignore[misc]
+class RecipeBase(BaseModel):
     title: str
     description: Optional[str] = None
     ingredients: str
