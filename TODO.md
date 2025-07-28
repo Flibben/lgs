@@ -3,7 +3,7 @@
 - [x] Initialize a git repository
 - [x] Set up a Python virtual environment
 - [x] Create the project folder structure as per PLANNED_STRUCTURE.md
-- [ ] Add .env, .gitignore, and initial README.md
+- [x] Add .env, .gitignore, and initial README.md
     - [x] .gitignore
     - [x] .env
     - [x] initial README.md
@@ -27,13 +27,13 @@
 - [x] Implement app/services/recipe_service.py for recipe business logic
 - [x] Add app/api/v1/recipes.py for recipe endpoints
 
-- [ ] Set up Alembic for migrations
-- [ ] Create initial migration for user and recipe tables
+- [x] Set up Alembic for migrations
+- [x] Create initial migration for user and recipe tables
 
-- [ ] Set up tests/ directory with conftest.py, test_users.py, and test_recipes.py
-- [ ] Write tests for user registration, login, and recipe CRUD
+- [x] Set up tests/ directory with conftest.py, test_users.py, and test_recipes.py
+- [x] Write tests for user registration, login, and recipe CRUD
 
-- [ ] Set up pre-commit hooks for formatting, linting, and type checks
+- [x] Set up pre-commit hooks for formatting, linting, and type checks
 - [ ] Add CI configuration (e.g., GitHub Actions) for tests, linting, and type checks
 
 - [ ] Update README.md with setup, usage, and contribution instructions

@@ -1,21 +1,27 @@
-from pydantic import BaseModel
-from typing import Optional
 import uuid
+from typing import Optional
 
-class RecipeBase(BaseModel):
+from pydantic import BaseModel
+
+
+class RecipeBase(BaseModel):  # type: ignore[misc]
     title: str
     description: Optional[str] = None
     ingredients: str
     instructions: str
 
+
 class RecipeCreate(RecipeBase):
     pass
+
 
 class RecipeUpdate(RecipeBase):
     pass
 
+
 class RecipeRead(RecipeBase):
     id: uuid.UUID
     owner_id: uuid.UUID
+
     class Config:
-        orm_mode = True 
+        orm_mode = True

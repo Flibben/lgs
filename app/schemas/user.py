@@ -1,11 +1,15 @@
-from fastapi_users import schemas
 import uuid
 
-class UserRead(schemas.BaseUser[uuid.UUID]):
+from fastapi_users import schemas
+
+
+class UserRead(schemas.BaseUser[uuid.UUID]):  # type: ignore[misc]
     pass
 
-class UserCreate(schemas.BaseUserCreate):
+
+class UserCreate(schemas.BaseUserCreate):  # type: ignore[misc]
     pass
 
-class UserUpdate(schemas.BaseUserUpdate):
-    pass 
+
+class UserUpdate(schemas.BaseUserUpdate):  # type: ignore[misc]
+    pass
