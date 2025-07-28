@@ -51,4 +51,4 @@ This plan outlines the step-by-step process for building a production-ready, typ
 
 ---
 
-This plan ensures the backend is robust, maintainable, secure, and easy for LLMs and developers to work with. 
+This plan ensures the backend is robust, maintainable, secure, and easy for LLMs and developers to work with.

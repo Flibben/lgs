@@ -29,4 +29,4 @@ services:
       - db
 
 volumes:
-  postgres_data: 
+  postgres_data:

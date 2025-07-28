@@ -63,4 +63,4 @@ lgs/
 - All endpoints, models, and schemas are versioned and organized.
 - Dev tools and configs are included for formatting, linting, and type checking.
 - Tests are organized by feature.
-- Docker and environment management are included. 
+- Docker and environment management are included.

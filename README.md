@@ -45,4 +45,4 @@ See PLANNED_STRUCTURE.md for details.
 ## Contributing
 - Ensure all code is type-annotated and covered by tests.
 - Follow the code style enforced by pre-commit hooks.
-- Update documentation as needed. 
+- Update documentation as needed.

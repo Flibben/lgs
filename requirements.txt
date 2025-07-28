@@ -7,4 +7,4 @@ alembic
 fastapi-users[sqlalchemy]
 passlib
 python-jose
-python-dotenv 
+python-dotenv

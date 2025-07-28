@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.api.v1 import users, recipes
+
+from app.api.v1 import recipes, users
 
 app = FastAPI()
 

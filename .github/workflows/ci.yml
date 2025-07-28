@@ -47,4 +47,4 @@ jobs:
           mypy app tests
       - name: Run tests
         run: |
-          pytest 
+          pytest
